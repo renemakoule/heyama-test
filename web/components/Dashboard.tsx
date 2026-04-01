@@ -108,11 +108,11 @@ function AddModal({ onClose }: { onClose: () => void }) {
       <motion.div
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="bg-zinc-950 border border-white/10 p-10 rounded-[3px] w-full max-w-lg"
+        className="bg-zinc-950 border border-white/10 p-6 sm:p-10 rounded-[3px] w-full max-w-lg max-h-[90vh] overflow-y-auto"
       >
-        <div className="flex justify-between items-start mb-8">
+        <div className="flex justify-between items-start mb-6 sm:mb-8">
           <div>
-            <h2 className="text-3xl font-bold tracking-tighter text-white">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter text-white">
               Nouvelle Entité
             </h2>
             <p className="text-[10px] uppercase tracking-[0.3em] text-zinc-500 mt-1 font-bold">
@@ -219,33 +219,34 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-[#09090b] text-white">
       <nav className="border-b border-white/5 bg-black/60 backdrop-blur-xl sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-8 lg:px-12 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <span className="font-bold tracking-tighter text-xl">Heyama</span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 h-14 sm:h-16 flex items-center justify-between">
+          <div className="flex items-center gap-2 sm:gap-4">
+            <span className="font-bold tracking-tighter text-lg sm:text-xl">Heyama</span>
           </div>
           <button
             onClick={() => setIsModalOpen(true)}
-            className="bg-white text-black text-[10px] font-bold uppercase tracking-widest px-8 py-4 rounded-[3px] hover:bg-zinc-200 transition-all flex items-center gap-2 shadow-xl"
+            className="bg-white text-black text-[10px] sm:text-xs font-bold uppercase tracking-widest px-4 sm:px-8 py-2.5 sm:py-4 rounded-[3px] hover:bg-zinc-200 transition-all flex items-center gap-2 shadow-xl"
           >
-            <Plus size={16} /> Ajouter un objet
+            <Plus size={16} /> <span className="hidden sm:inline">Ajouter un objet</span>
+            <span className="sm:hidden">Ajouter</span>
           </button>
         </div>
       </nav>
 
-      <div className="max-w-7xl mx-auto px-8 lg:px-12 py-16">
-        <header className="mb-16">
-          <h2 className="text-5xl font-bold tracking-tighter text-white italic">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-8 sm:py-16">
+        <header className="mb-8 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter text-white italic">
             Flux{" "}
-            <span className="font-light text-zinc-700 underline decoration-zinc-800 underline-offset-8">
+            <span className="font-light text-zinc-700 underline decoration-zinc-800 underline-offset-4 sm:underline-offset-8">
               Live
             </span>
           </h2>
-          <p className="text-zinc-500 mt-4 text-sm font-light">
+          <p className="text-zinc-500 mt-2 sm:mt-4 text-xs sm:text-sm font-light">
             Gestion centralisée des entités MongoDB avec stockage S3.
           </p>
         </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           <AnimatePresence>
             {objects.map((obj) => (
               <ObjectCard
