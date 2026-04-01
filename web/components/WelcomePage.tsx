@@ -39,14 +39,13 @@ export default function WelcomePage({ onStart }: { onStart: () => void }) {
           Core Engine
         </span>
         <h1 className="text-4xl sm:text-6xl font-light tracking-tighter text-foreground mb-4 italic">
-          Gestion{" "}
+          Heyama{" "}
           <span className="font-bold text-muted-foreground/80 not-italic">
-            Expert
+            Test
           </span>
         </h1>
         <p className="max-w-[320px] text-[11px] leading-relaxed text-muted-foreground mb-12 tracking-wide font-light">
-          Solution d'administration intelligente pour environnements commerciaux
-          hybrides.
+          Test d'introduction pour l'integration de l'equipe Heyama.
         </p>
 
         {/* BOUTON CORRIGÉ */}
@@ -66,7 +65,7 @@ export default function WelcomePage({ onStart }: { onStart: () => void }) {
 
       <footer className="absolute bottom-10 left-0 w-full flex justify-center py-4 border-t border-border/10">
         <p className="text-[8px] uppercase tracking-[0.4em] text-muted-foreground/40">
-          {currentYear} | Powered By GAS LABS
+          {currentYear} | Powered By GAS
         </p>
       </footer>
     </div>
