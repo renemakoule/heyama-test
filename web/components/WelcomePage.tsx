@@ -8,7 +8,7 @@ export default function WelcomePage({ onStart }: { onStart: () => void }) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-background">
+    <div className="dark relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-background text-foreground">
       {/* --- STRUCTURE --- */}
       <div className="absolute left-[5%] lg:left-[10%] top-0 h-full w-[1px] bg-border/40" />
       <div className="absolute right-[5%] lg:right-[10%] top-0 h-full w-[1px] bg-border/40" />
